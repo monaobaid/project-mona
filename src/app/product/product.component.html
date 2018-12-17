@@ -1,0 +1,65 @@
+
+<h1>
+ Add product
+</h1>
+
+<!--
+<label>Product Name:   &nbsp; &nbsp; </label>
+<br><br> 
+-->
+
+
+
+   
+    <div style="background-color: beige">
+  
+       <h3> Product Name:</h3> 
+    
+        <input #np class ="styletext"  [(ngModel)] = 'name' type="text" placeholder="Enter product name "  />
+      <br>
+      <h3> Product Price : </h3>
+          <input class ="styletext" [(ngModel)] = 'price'  type="number" placeholder="Enter product price " />
+      <br>
+           <h3> Product Quantity : </h3>
+        
+            <input class ="styletext"  [(ngModel)] = 'quantity' type="number"  placeholder="Enter product quantity " />
+            <br>
+            <br>     
+            
+          </div>
+          <br>
+         
+    <button class ="stylebutton"   type="submit" (click)='addProduct()' > Add produc  </button>
+    <br>
+    <br>
+    <table border="1" class="styletable"  >
+    <tr class="stylebutton" > 
+      <th>
+            Name of Product
+      </th>
+      <th>
+            Price of Product
+      </th>
+      <th>
+            Quantity of Product
+       </th>
+     </tr>
+      <tr *ngFor='let p of products' class="stylerowtable">
+       
+        <td>
+          {{p.name}}
+        </td>
+        <td>
+          {{p.price}}
+        </td>
+        <td>
+          {{p.quantity}}
+        </td>
+      </tr>
+    </table>
+
+   
+   
+      
+
+           
